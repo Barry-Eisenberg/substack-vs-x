@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Great Migration: Substack vs. X</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- Grain overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Sticky Nav -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <span class="logo-substack">SUB</span><span class="logo-vs">VS</span><span class="logo-x">X</span>
+      </div>
+      <nav class="site-nav" id="site-nav">
+        <a href="#growth">Growth</a>
+        <a href="#revenue">Revenue</a>
+        <a href="#trust">Trust</a>
+        <a href="#exodus">Exodus</a>
+        <a href="#voices">Voices</a>
+        <a href="#compare">Compare</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== SECTION 1: HERO ===================== -->
+    <section class="hero-section" id="hero">
+      <div class="hero-dateline">INVESTIGATIVE REPORT · FEBRUARY 2026</div>
+      <h1 class="hero-headline">
+        <span class="headline-line">The Great</span>
+        <span class="headline-line accent-substack italic">Migration</span>
+      </h1>
+      <p class="hero-subtitle">How Substack became the new town square<br>as X descended into a propaganda machine</p>
+
+      <div class="hero-stats-bar">
+        <div class="stat-callout substack-stat">
+          <span class="stat-number">5M<sup>+</sup></span>
+          <span class="stat-label">Paid Substack Subscribers</span>
+          <span class="stat-change up">&#8599; 45,000% growth since 2018</span>
+        </div>
+        <div class="stat-divider">
+          <div class="divider-line"></div>
+          <div class="divider-vs">VS</div>
+          <div class="divider-line"></div>
+        </div>
+        <div class="stat-callout x-stat">
+          <span class="stat-number">91<sup>%</sup></span>
+          <span class="stat-label">Decline in X Brand Value</span>
+          <span class="stat-change down">&#8601; $5.7B → $498M since 2022</span>
+        </div>
+      </div>
+
+      <p class="hero-body">
+        In October 2022, Elon Musk completed his $44 billion acquisition of Twitter. What followed was one of the most dramatic corporate implosions in media history — a systematic dismantling of content moderation, a mass exodus of advertisers, journalists, and public figures, and a precipitous collapse in both revenue and trust. Into the void stepped Substack: an independent platform where writers own their audiences, readers pay directly for quality, and the algorithm serves subscribers, not engagement-bait. This is a data-driven account of that divergence.
+      </p>
+      <div class="scroll-hint" aria-hidden="true">
+        <span class="scroll-hint-text">Scroll to explore</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 2: GROWTH ===================== -->
+    <section class="content-section" id="growth">
+      <div class="section-label">Section 01</div>
+      <h2 class="section-headline">User Growth:<br><em>One Up, One Down</em></h2>
+      <p class="section-intro">As X shed users and cultural credibility, Substack compounded growth quarter after quarter — building a paid audience that rivals major print outlets.</p>
+
+      <div class="chart-grid two-col">
+        <div class="chart-card substack-card">
+          <div class="chart-card-header">
+            <span class="platform-badge substack-badge">SUBSTACK</span>
+            <h3 class="chart-title">Paid Subscribers Growth</h3>
+            <p class="chart-note">11K → 5M+ (2018–2025)</p>
+          </div>
+          <div class="chart-wrapper">
+            <canvas id="substackGrowthChart"></canvas>
+          </div>
+          <div class="chart-source">Source: <a href="https://backlinko.com/substack-users" target="_blank" rel="noopener noreferrer">Backlinko</a>, <a href="https://sacra.com/c/substack/" target="_blank" rel="noopener noreferrer">Sacra</a></div>
+        </div>
+
+        <div class="chart-card x-card">
+          <div class="chart-card-header">
+            <span class="platform-badge x-badge">X / TWITTER</span>
+            <h3 class="chart-title">US Adult Usage Rate</h3>
+            <p class="chart-note">Stagnant then collapsing post-acquisition</p>
+          </div>
+          <div class="chart-wrapper">
+            <canvas id="xUsageChart"></canvas>
+          </div>
+          <div class="chart-source">Source: <a href="https://www.pewresearch.org/internet/2024/01/31/americans-use-of-twitter-x/" target="_blank" rel="noopener noreferrer">Pew Research Center</a></div>
+        </div>
+      </div>
+
+      <div class="chart-card full-width-card">
+        <div class="chart-card-header">
+          <span class="platform-badge neutral-badge">COMPETITOR GROWTH</span>
+          <h3 class="chart-title">The Alternatives Rising: Threads & Bluesky MAU</h3>
+          <p class="chart-note">Millions of Monthly Active Users as users seek alternatives to X</p>
+        </div>
+        <div class="chart-wrapper chart-wrapper-tall">
+          <canvas id="competitorChart"></canvas>
+        </div>
+        <div class="chart-source">Source: <a href="https://techcrunch.com/2025/01/30/threads-hits-320-million-monthly-active-users/" target="_blank" rel="noopener noreferrer">TechCrunch (Threads)</a>, <a href="https://fortune.com/2025/11/22/bluesky-user-growth-2025/" target="_blank" rel="noopener noreferrer">Fortune (Bluesky)</a></div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 3: REVENUE ===================== -->
+    <section class="content-section alt-section" id="revenue">
+      <div class="section-label">Section 02</div>
+      <h2 class="section-headline">Revenue &amp; Valuation:<br><em>The Great Divergence</em></h2>
+      <p class="section-intro">X revenue has collapsed 51% from its 2021 peak. Substack has grown its ARR nearly 20x in five years. The market is rendering its verdict.</p>
+
+      <div class="chart-grid two-col">
+        <div class="chart-card x-card">
+          <div class="chart-card-header">
+            <span class="platform-badge x-badge">X / TWITTER</span>
+            <h3 class="chart-title">Total Annual Revenue</h3>
+            <p class="chart-note">51% decline from $5.08B peak (2021)</p>
+          </div>
+          <div class="chart-wrapper">
+            <canvas id="xRevenueChart"></canvas>
+          </div>
+          <div class="chart-source">Source: <a href="https://fortune.com/2024/05/14/elon-musk-twitter-x-revenue-decline/" target="_blank" rel="noopener noreferrer">Fortune</a>, <a href="https://www.reuters.com/technology/twitter-ad-revenue-fell-2023-2024-03-28/" target="_blank" rel="noopener noreferrer">Reuters</a></div>
+        </div>
+
+        <div class="chart-card substack-card">
+          <div class="chart-card-header">
+            <span class="platform-badge substack-badge">SUBSTACK</span>
+            <h3 class="chart-title">Annual Recurring Revenue</h3>
+            <p class="chart-note">From $2.4M to $45M ARR (2020–2025)</p>
+          </div>
+          <div class="chart-wrapper">
+            <canvas id="substackRevenueChart"></canvas>
+          </div>
+          <div class="chart-source">Source: <a href="https://sacra.com/c/substack/" target="_blank" rel="noopener noreferrer">Sacra</a>, <a href="https://techcrunch.com/2024/03/07/substack-passes-3-million-paid-subscribers/" target="_blank" rel="noopener noreferrer">TechCrunch</a></div>
+        </div>
+      </div>
+
+      <div class="chart-grid two-col">
+        <div class="chart-card x-card">
+          <div class="chart-card-header">
+            <span class="platform-badge x-badge">X / TWITTER</span>
+            <h3 class="chart-title">Brand Value Collapse</h3>
+            <p class="chart-note">91% decline — $5.7B → $498M</p>
+          </div>
+          <div class="chart-wrapper">
+            <canvas id="xBrandChart"></canvas>
+          </div>
+          <div class="chart-source">Source: <a href="https://www.brandfinance.com/press-releases/x-formerly-twitter-brand-value-falls-96-to-under-700-million/" target="_blank" rel="noopener noreferrer">Brand Finance</a></div>
+        </div>
+
+        <div class="chart-card substack-card">
+          <div class="chart-card-header">
+            <span class="platform-badge substack-badge">SUBSTACK</span>
+            <h3 class="chart-title">Valuation Trajectory</h3>
+            <p class="chart-note">Unicorn status achieved at $1.1B (2025)</p>
+          </div>
+          <div class="chart-wrapper">
+            <canvas id="substackValChart"></canvas>
+          </div>
+          <div class="chart-source">Source: <a href="https://www.wsj.com/articles/substack-hits-1-billion-valuation-with-new-funding-round/" target="_blank" rel="noopener noreferrer">WSJ</a>, <a href="https://sacra.com/c/substack/" target="_blank" rel="noopener noreferrer">Sacra</a></div>
+        </div>
+      </div>
+
+      <!-- Big quote callout -->
+      <div class="big-stat-callout">
+        <div class="big-stat-item x-big-stat">
+          <span class="big-stat-num">-51%</span>
+          <span class="big-stat-desc">X revenue since 2021 peak</span>
+        </div>
+        <div class="big-stat-item substack-big-stat">
+          <span class="big-stat-num">+1,775%</span>
+          <span class="big-stat-desc">Substack ARR growth since 2020</span>
+        </div>
+        <div class="big-stat-item x-big-stat">
+          <span class="big-stat-num">4%</span>
+          <span class="big-stat-desc">of marketers consider X ads "brand-safe"</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 4: TRUST & QUALITY ===================== -->
+    <section class="content-section" id="trust">
+      <div class="section-label">Section 03</div>
+      <h2 class="section-headline">Content Quality &amp; Trust:<br><em>By the Numbers</em></h2>
+      <p class="section-intro">Academic research and advertiser behavior tell a damning story: X has become a platform where hate speech is up, high-quality information is down, and the people tasked with policing both have been fired.</p>
+
+      <div class="metrics-grid">
+        <div class="metric-card x-metric animate-in">
+          <div class="metric-icon">&#9650;</div>
+          <div class="metric-value">+50%</div>
+          <div class="metric-label">Increase in hate speech after acquisition</div>
+          <div class="metric-source">UC Berkeley, PLOS ONE</div>
+        </div>
+        <div class="metric-card x-metric animate-in">
+          <div class="metric-icon">&#9660;</div>
+          <div class="metric-value">-27.84%</div>
+          <div class="metric-label">Decline in sharing of high-credibility content</div>
+          <div class="metric-source">Harvard Misinformation Review</div>
+        </div>
+        <div class="metric-card x-metric animate-in">
+          <div class="metric-icon">&#9888;</div>
+          <div class="metric-value">62,000+</div>
+          <div class="metric-label">Previously banned accounts reinstated</div>
+          <div class="metric-source">Reuters / Press Gazette</div>
+        </div>
+        <div class="metric-card x-metric animate-in">
+          <div class="metric-icon">&#9997;</div>
+          <div class="metric-value">-80%</div>
+          <div class="metric-label">Safety engineers cut post-acquisition</div>
+          <div class="metric-source">Press Gazette / Reuters</div>
+        </div>
+        <div class="metric-card x-metric animate-in">
+          <div class="metric-icon">&#9997;</div>
+          <div class="metric-value">-52%</div>
+          <div class="metric-label">Content moderators eliminated</div>
+          <div class="metric-source">Press Gazette</div>
+        </div>
+        <div class="metric-card x-metric animate-in">
+          <div class="metric-icon">&#128683;</div>
+          <div class="metric-value">4%</div>
+          <div class="metric-label">Marketers who consider X ads "brand-safe"</div>
+          <div class="metric-source">Reuters Institute</div>
+        </div>
+        <div class="metric-card substack-metric animate-in">
+          <div class="metric-icon">&#9733;</div>
+          <div class="metric-value">87%</div>
+          <div class="metric-label">Revenue share kept by Substack writers</div>
+          <div class="metric-source">Substack</div>
+        </div>
+        <div class="metric-card substack-metric animate-in">
+          <div class="metric-icon">&#128161;</div>
+          <div class="metric-value">Subs</div>
+          <div class="metric-label">Algorithm optimized for subscriptions, not engagement bait</div>
+          <div class="metric-source">Substack Policy</div>
+        </div>
+      </div>
+
+      <div class="trust-bar-section">
+        <h3 class="subsection-headline">X Platform Degradation: A Visual Audit</h3>
+        <div class="chart-card x-card">
+          <div class="chart-wrapper">
+            <canvas id="trustChart"></canvas>
+          </div>
+          <div class="chart-source">Sources: UC Berkeley PLOS ONE, Harvard Misinformation Review, Reuters Institute, Press Gazette</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 5: EXODUS ===================== -->
+    <section class="content-section alt-section" id="exodus">
+      <div class="section-label">Section 04</div>
+      <h2 class="section-headline">The Exodus:<br><em>Who Left &amp; Where They Went</em></h2>
+      <p class="section-intro">The migration is not just demographic — it is institutional. News organizations, journalists, politicians, and cultural figures have all abandoned X, many moving their audiences to Substack.</p>
+
+      <div class="exodus-grid">
+
+        <div class="exodus-column">
+          <h3 class="exodus-col-title"><span class="accent-x">Media Organizations</span><br>Leaving X</h3>
+          <div class="exodus-timeline">
+            <div class="exodus-item animate-in">
+              <div class="exodus-date">Apr 2023</div>
+              <div class="exodus-entity">NPR</div>
+              <div class="exodus-detail">Left after being labeled "state-affiliated media" by the platform</div>
+            </div>
+            <div class="exodus-item animate-in">
+              <div class="exodus-date">Apr 2023</div>
+              <div class="exodus-entity">PBS</div>
+              <div class="exodus-detail">Suspended accounts in solidarity with NPR</div>
+            </div>
+            <div class="exodus-item animate-in">
+              <div class="exodus-date">Nov 2024</div>
+              <div class="exodus-entity">The Guardian</div>
+              <div class="exodus-detail">"Toxic media environment" cited by editor Katharine Viner</div>
+            </div>
+            <div class="exodus-item animate-in">
+              <div class="exodus-date">Jan 2025</div>
+              <div class="exodus-entity">Le Monde</div>
+              <div class="exodus-detail">French daily exits citing platform's editorial direction</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="exodus-column">
+          <h3 class="exodus-col-title"><span class="accent-substack">Journalists</span><br>Moving to Substack</h3>
+          <div class="exodus-timeline">
+            <div class="exodus-item animate-in">
+              <div class="exodus-date">Oct 2024</div>
+              <div class="exodus-entity">Taylor Lorenz</div>
+              <div class="exodus-detail">Tech journalist, Washington Post → independent Substack</div>
+            </div>
+            <div class="exodus-item animate-in">
+              <div class="exodus-date">2024</div>
+              <div class="exodus-entity">Mehdi Hasan</div>
+              <div class="exodus-detail">MSNBC anchor launches "Zeteo" on Substack</div>
+            </div>
+            <div class="exodus-item animate-in">
+              <div class="exodus-date">Jan 2025</div>
+              <div class="exodus-entity">Jim Acosta</div>
+              <div class="exodus-detail">CNN anchor moves to Substack after departure</div>
+            </div>
+            <div class="exodus-item animate-in">
+              <div class="exodus-date">Jan 2025</div>
+              <div class="exodus-entity">Joy Reid</div>
+              <div class="exodus-detail">MSNBC host launches independent Substack newsletter</div>
+            </div>
+            <div class="exodus-item animate-in">
+              <div class="exodus-date">Jan 2025</div>
+              <div class="exodus-entity">Jennifer Rubin</div>
+              <div class="exodus-detail">Washington Post columnist moves to Substack</div>
+            </div>
+            <div class="exodus-item animate-in">
+              <div class="exodus-date">2025</div>
+              <div class="exodus-entity">Paul Krugman</div>
+              <div class="exodus-detail">Nobel laureate economist launches Substack</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="exodus-column">
+          <h3 class="exodus-col-title"><span class="accent-substack">Politicians &amp; Celebrities</span><br>Building Audiences</h3>
+          <div class="exodus-cards-small">
+            <div class="person-card animate-in substack-person">
+              <div class="person-name">Pete Buttigieg</div>
+              <div class="person-detail">394K+ subscribers on Substack</div>
+            </div>
+            <div class="person-card animate-in substack-person">
+              <div class="person-name">Chris Murphy</div>
+              <div class="person-detail">US Senator, building direct audience</div>
+            </div>
+            <div class="person-card animate-in substack-person">
+              <div class="person-name">Jasmine Crockett</div>
+              <div class="person-detail">Congressmember on Substack</div>
+            </div>
+          </div>
+          <div class="exodus-divider">Celebrities leaving X</div>
+          <div class="exodus-cards-small">
+            <div class="person-card animate-in x-person">
+              <div class="person-name">Stephen King</div>
+              <div class="person-detail">Author, departed citing platform culture</div>
+            </div>
+            <div class="person-card animate-in x-person">
+              <div class="person-name">Barbra Streisand</div>
+              <div class="person-detail">Moved to other platforms</div>
+            </div>
+            <div class="person-card animate-in x-person">
+              <div class="person-name">Jamie Lee Curtis</div>
+              <div class="person-detail">Actor, left citing toxic environment</div>
+            </div>
+            <div class="person-card animate-in x-person">
+              <div class="person-name">Don Lemon</div>
+              <div class="person-detail">Former CNN anchor departed</div>
+            </div>
+            <div class="person-card animate-in x-person">
+              <div class="person-name">Elton John</div>
+              <div class="person-detail">Musician left citing hate speech increase</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 6: QUOTES ===================== -->
+    <section class="content-section quotes-section" id="voices">
+      <div class="section-label">Section 05</div>
+      <h2 class="section-headline">In Their Own Words</h2>
+      <p class="section-intro">The exodus is being narrated in real time. These are some of the voices defining the moment.</p>
+
+      <div class="quotes-carousel" id="quotesCarousel">
+        <div class="quote-card active" data-index="0">
+          <div class="quote-mark">&ldquo;</div>
+          <blockquote class="quote-text">X is a toxic media platform.</blockquote>
+          <div class="quote-attribution">
+            <div class="quote-name">Katharine Viner</div>
+            <div class="quote-title">Editor-in-chief, The Guardian</div>
+          </div>
+        </div>
+        <div class="quote-card" data-index="1">
+          <div class="quote-mark">&ldquo;</div>
+          <blockquote class="quote-text">Going off this platform now. It has become a toxic cesspool.</blockquote>
+          <div class="quote-attribution">
+            <div class="quote-name">Paul LeBlanc</div>
+            <div class="quote-title">President, Southern New Hampshire University</div>
+          </div>
+        </div>
+        <div class="quote-card" data-index="2">
+          <div class="quote-mark">&ldquo;</div>
+          <blockquote class="quote-text">The people who made Twitter fun have all given up. There's nothing worth sticking around for anymore.</blockquote>
+          <div class="quote-attribution">
+            <div class="quote-name">Dave Karpf</div>
+            <div class="quote-title">Professor, George Washington University</div>
+          </div>
+        </div>
+        <div class="quote-card" data-index="3">
+          <div class="quote-mark">&ldquo;</div>
+          <blockquote class="quote-text">You can't make a good deal with a bad person.</blockquote>
+          <div class="quote-attribution">
+            <div class="quote-name">Doomberg</div>
+            <div class="quote-title">Independent financial commentator</div>
+          </div>
+        </div>
+        <div class="quote-card" data-index="4">
+          <div class="quote-mark">&ldquo;</div>
+          <blockquote class="quote-text">Places like Substack that allow you to have a direct one-on-one relationship with the audience have never been more valuable.</blockquote>
+          <div class="quote-attribution">
+            <div class="quote-name">Dan Pfeiffer</div>
+            <div class="quote-title">Crooked Media co-founder, former Obama aide</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-nav">
+        <button class="quote-nav-btn" id="quotePrev" aria-label="Previous quote">&#8592;</button>
+        <div class="quote-dots" id="quoteDots">
+          <button class="quote-dot active" data-index="0" aria-label="Quote 1"></button>
+          <button class="quote-dot" data-index="1" aria-label="Quote 2"></button>
+          <button class="quote-dot" data-index="2" aria-label="Quote 3"></button>
+          <button class="quote-dot" data-index="3" aria-label="Quote 4"></button>
+          <button class="quote-dot" data-index="4" aria-label="Quote 5"></button>
+        </div>
+        <button class="quote-nav-btn" id="quoteNext" aria-label="Next quote">&#8594;</button>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 7: COMPARISON TABLE ===================== -->
+    <section class="content-section alt-section" id="compare">
+      <div class="section-label">Section 06</div>
+      <h2 class="section-headline">Head to Head:<br><em>The Full Ledger</em></h2>
+      <p class="section-intro">A structured comparison across every meaningful dimension — business model, creator economics, content quality, and trajectory.</p>
+
+      <div class="table-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th class="table-metric-col">Metric</th>
+              <th class="table-substack-col">
+                <span class="platform-badge substack-badge">SUBSTACK</span>
+              </th>
+              <th class="table-x-col">
+                <span class="platform-badge x-badge">X (TWITTER)</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-row">
+              <td class="metric-name">Primary Revenue</td>
+              <td class="substack-cell"><span class="cell-positive">Subscriptions</span></td>
+              <td class="x-cell"><span class="cell-negative">Advertising</span></td>
+            </tr>
+            <tr class="table-row">
+              <td class="metric-name">Creator Revenue Share</td>
+              <td class="substack-cell"><span class="cell-positive">87%</span></td>
+              <td class="x-cell"><span class="cell-negative">Variable / Limited</span></td>
+            </tr>
+            <tr class="table-row">
+              <td class="metric-name">Content Ownership</td>
+              <td class="substack-cell"><span class="cell-positive">Creator owns list</span></td>
+              <td class="x-cell"><span class="cell-negative">Platform controls distribution</span></td>
+            </tr>
+            <tr class="table-row">
+              <td class="metric-name">Algorithm Goal</td>
+              <td class="substack-cell"><span class="cell-positive">Maximize subscriptions</span></td>
+              <td class="x-cell"><span class="cell-negative">Maximize time-on-platform</span></td>
+            </tr>
+            <tr class="table-row">
+              <td class="metric-name">Paid Subscribers</td>
+              <td class="substack-cell"><span class="cell-positive">5M+ (2025)</span></td>
+              <td class="x-cell"><span class="cell-neutral">N/A (ad model)</span></td>
+            </tr>
+            <tr class="table-row">
+              <td class="metric-name">2025 Revenue</td>
+              <td class="substack-cell"><span class="cell-positive">$45M ARR &#8599;</span></td>
+              <td class="x-cell"><span class="cell-negative">~$2.5B &#8601; (declining)</span></td>
+            </tr>
+            <tr class="table-row">
+              <td class="metric-name">Valuation Trend</td>
+              <td class="substack-cell"><span class="cell-positive">Rising — $1.1B unicorn</span></td>
+              <td class="x-cell"><span class="cell-negative">Falling — 91% brand value loss</span></td>
+            </tr>
+            <tr class="table-row">
+              <td class="metric-name">Hate Speech</td>
+              <td class="substack-cell"><span class="cell-positive">No systemic increase</span></td>
+              <td class="x-cell"><span class="cell-negative">+50% post-acquisition</span></td>
+            </tr>
+            <tr class="table-row">
+              <td class="metric-name">Trust &amp; Safety</td>
+              <td class="substack-cell"><span class="cell-positive">Community standards maintained</span></td>
+              <td class="x-cell"><span class="cell-negative">80% of safety engineers cut</span></td>
+            </tr>
+            <tr class="table-row">
+              <td class="metric-name">Brand Safety (Ads)</td>
+              <td class="substack-cell"><span class="cell-positive">Subscription model — no ad risk</span></td>
+              <td class="x-cell"><span class="cell-negative">Only 4% of marketers approve</span></td>
+            </tr>
+            <tr class="table-row">
+              <td class="metric-name">Notable Recent Additions</td>
+              <td class="substack-cell"><span class="cell-positive">Buttigieg, Acosta, Krugman, Hasan</span></td>
+              <td class="x-cell"><span class="cell-neutral">—</span></td>
+            </tr>
+            <tr class="table-row">
+              <td class="metric-name">Notable Recent Departures</td>
+              <td class="substack-cell"><span class="cell-neutral">—</span></td>
+              <td class="x-cell"><span class="cell-negative">Guardian, NPR, Stephen King, Elton John</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-thesis">
+        <div class="footer-headline">The Verdict</div>
+        <p class="footer-text">The data is unambiguous: one platform is in structural decline, the other in structural growth. The question is no longer whether X is failing — it's how long the ad market will sustain a platform that has systematically destroyed its own editorial credibility.</p>
+      </div>
+      <div class="footer-sources">
+        <div class="footer-sources-title">Data Sources</div>
+        <p class="footer-sources-text">Data compiled from <a href="https://backlinko.com/substack-users" target="_blank" rel="noopener noreferrer">Backlinko</a>, <a href="https://sacra.com/c/substack/" target="_blank" rel="noopener noreferrer">Sacra</a>, <a href="https://pressgazette.co.uk/" target="_blank" rel="noopener noreferrer">Press Gazette</a>, <a href="https://www.pewresearch.org/" target="_blank" rel="noopener noreferrer">Pew Research</a>, <a href="https://misinforeview.hks.harvard.edu/" target="_blank" rel="noopener noreferrer">Harvard Misinformation Review</a>, <a href="https://journals.plos.org/plosone/" target="_blank" rel="noopener noreferrer">UC Berkeley PLOS ONE</a>, <a href="https://fortune.com/" target="_blank" rel="noopener noreferrer">Fortune</a>, <a href="https://variety.com/" target="_blank" rel="noopener noreferrer">Variety</a>, <a href="https://techcrunch.com/" target="_blank" rel="noopener noreferrer">TechCrunch</a>, <a href="https://reutersinstitute.politics.ox.ac.uk/" target="_blank" rel="noopener noreferrer">Reuters Institute</a>, <a href="https://www.brandfinance.com/" target="_blank" rel="noopener noreferrer">Brand Finance</a>, and other sources.</p>
+        <p class="footer-updated">Last updated: February 2026</p>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <span>The Great Migration &copy; 2026</span>
+      <span>An investigative data report</span>
+    </div>
+  </footer>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

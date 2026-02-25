@@ -556,6 +556,217 @@ initChartWhenVisible('trustChart', (canvas) => {
 });
 
 /* ============================================================
+   SECTION 03b: ADVERTISER EXODUS CHARTS
+   ============================================================ */
+
+const THREADS = '#f5a623';
+const THREADS_DIM = 'rgba(245,166,35,0.15)';
+const THREADS_FILL = 'rgba(245,166,35,0.08)';
+const X_RED_DIM = 'rgba(232,69,69,0.35)';
+
+// Brand Spending Collapse — grouped horizontal bar chart
+initChartWhenVisible('brandSpendChart', (canvas) => {
+  return new Chart(canvas, {
+    type: 'bar',
+    data: {
+      labels: ['AT&T', 'Disney', 'Comcast', 'Apple', 'Microsoft'],
+      datasets: [
+        {
+          label: '2022 Spend',
+          data: [33.4, 27.7, 22.5, 20.4, 11.0],
+          backgroundColor: 'rgba(232,69,69,0.35)',
+          borderColor: 'rgba(232,69,69,0.6)',
+          borderWidth: 1,
+          borderRadius: 3
+        },
+        {
+          label: '2025 Spend',
+          data: [0.1, 0.5, 1.7, 0.5, 0.4],
+          backgroundColor: 'rgba(232,69,69,0.85)',
+          borderColor: X_RED,
+          borderWidth: 1,
+          borderRadius: 3
+        }
+      ]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: { duration: 1100, easing: 'easeInOutQuart' },
+      plugins: {
+        tooltip: {
+          backgroundColor: '#1c1c1c',
+          borderColor: X_RED,
+          borderWidth: 1,
+          titleColor: '#e8e8e8',
+          bodyColor: '#e8e8e8',
+          callbacks: {
+            label: ctx => ' ' + ctx.dataset.label + ': $' + ctx.raw + 'M'
+          }
+        },
+        legend: {
+          display: true,
+          labels: {
+            color: '#888',
+            font: { size: 11 },
+            boxWidth: 12,
+            padding: 16,
+            generateLabels: (chart) => [
+              { text: '2022 Spend', fillStyle: 'rgba(232,69,69,0.35)', strokeStyle: 'rgba(232,69,69,0.6)', lineWidth: 1, fontColor: '#888' },
+              { text: '2025 Spend', fillStyle: 'rgba(232,69,69,0.85)', strokeStyle: X_RED, lineWidth: 1, fontColor: '#888' }
+            ]
+          }
+        }
+      },
+      scales: {
+        x: {
+          ...axisConfig(),
+          ticks: {
+            color: TICK_COLOR,
+            font: { size: 10 },
+            callback: v => '$' + v + 'M'
+          }
+        },
+        y: {
+          ...axisConfig(),
+          ticks: { color: '#888', font: { size: 11 }, autoSkip: false }
+        }
+      }
+    }
+  });
+});
+
+// Ad Revenue Timeline — line chart
+initChartWhenVisible('adRevenueChart', (canvas) => {
+  return new Chart(canvas, {
+    type: 'line',
+    data: {
+      labels: ['Jun 2022 – May 2023', 'Jun 2023 – May 2024', 'Jun 2024 – May 2025'],
+      datasets: [{
+        data: [2.03, 1.82, 1.33],
+        borderColor: X_RED,
+        borderWidth: 2.5,
+        pointBackgroundColor: X_RED,
+        pointRadius: 6,
+        pointHoverRadius: 9,
+        tension: 0.35,
+        fill: true,
+        backgroundColor: (ctx) => {
+          const g = ctx.chart.ctx.createLinearGradient(0, 0, 0, ctx.chart.height);
+          g.addColorStop(0, 'rgba(232,69,69,0.15)');
+          g.addColorStop(1, 'rgba(232,69,69,0)');
+          return g;
+        }
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: { duration: 1200, easing: 'easeInOutQuart' },
+      plugins: {
+        tooltip: {
+          backgroundColor: '#1c1c1c',
+          borderColor: X_RED,
+          borderWidth: 1,
+          titleColor: X_RED,
+          bodyColor: '#e8e8e8',
+          callbacks: {
+            label: ctx => ' $' + ctx.raw + 'B rolling ad revenue'
+          }
+        }
+      },
+      scales: {
+        x: { ...axisConfig(), ticks: { color: TICK_COLOR, font: { size: 10 }, maxRotation: 0 } },
+        y: {
+          ...yAxisConfig(v => '$' + v + 'B'),
+          min: 0,
+          max: 2.5,
+          ticks: { color: TICK_COLOR, font: { size: 10 }, callback: v => '$' + v + 'B' }
+        }
+      }
+    }
+  });
+});
+
+/* ============================================================
+   SECTION 03c: APP & TRAFFIC TRENDS CHARTS
+   ============================================================ */
+
+// Mobile DAU Race — dual-line crossover chart
+initChartWhenVisible('dauRaceChart', (canvas) => {
+  return new Chart(canvas, {
+    type: 'line',
+    data: {
+      labels: ['Jun 2025', 'Sep 2025', 'Oct 2025', 'Jan 2026'],
+      datasets: [
+        {
+          label: 'X',
+          data: [132, 130.1, 124.7, 125],
+          borderColor: X_RED,
+          borderWidth: 2.5,
+          pointBackgroundColor: X_RED,
+          pointRadius: 5,
+          pointHoverRadius: 8,
+          tension: 0.3,
+          fill: false
+        },
+        {
+          label: 'Threads',
+          data: [115.1, 130.2, 128.2, 141.5],
+          borderColor: THREADS,
+          borderWidth: 2.5,
+          pointBackgroundColor: THREADS,
+          pointRadius: 5,
+          pointHoverRadius: 8,
+          tension: 0.3,
+          fill: false
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: { duration: 1300, easing: 'easeInOutQuart' },
+      plugins: {
+        tooltip: {
+          backgroundColor: '#1c1c1c',
+          borderColor: NEUTRAL,
+          borderWidth: 1,
+          titleColor: '#e8e8e8',
+          bodyColor: '#e8e8e8',
+          callbacks: {
+            label: ctx => ' ' + ctx.dataset.label + ': ' + ctx.raw + 'M DAU'
+          }
+        },
+        legend: {
+          display: true,
+          labels: {
+            color: '#888',
+            font: { size: 12 },
+            boxWidth: 14,
+            padding: 20,
+            generateLabels: (chart) => [
+              { text: 'X (Twitter)', fillStyle: X_RED, strokeStyle: X_RED, lineWidth: 2, fontColor: '#888' },
+              { text: 'Threads', fillStyle: THREADS, strokeStyle: THREADS, lineWidth: 2, fontColor: '#888' }
+            ]
+          }
+        }
+      },
+      scales: {
+        x: { ...axisConfig(), ticks: { color: TICK_COLOR, font: { size: 11 } } },
+        y: {
+          ...yAxisConfig(v => v + 'M'),
+          min: 100,
+          max: 155,
+          ticks: { color: TICK_COLOR, font: { size: 10 }, callback: v => v + 'M' }
+        }
+      }
+    }
+  });
+});
+
+/* ============================================================
    ACTIVE NAV HIGHLIGHT
    ============================================================ */
 const sections = document.querySelectorAll('section[id], main > *[id]');

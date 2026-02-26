@@ -8,15 +8,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./style.css" />
-  
-  <!-- Amplitude Analytics -->
-  <script src="https://cdn.amplitude.com/script/0f9bfa5e7c05010c9169696fae2b16cf.js"></script>
-  <script>
-    window.amplitude.init('0f9bfa5e7c05010c9169696fae2b16cf', {
-      fetchRemoteConfig: true,
-      autocapture: true
-    });
-  </script>
 </head>
 <body>
   <!-- Grain overlay -->
@@ -56,7 +47,7 @@
       <p class="hero-subtitle">How Substack became the new town square<br>as X descended into a propaganda machine</p>
 
       <div class="hero-stats-bar">
-        <div class="stat-callout substack-stat">
+        <div class="stat-callout substack-stat" data-source-name="Backlinko / Sacra" data-source-url="https://backlinko.com/substack-users">
           <span class="stat-number">5M<sup>+</sup></span>
           <span class="stat-label">Paid Substack Subscribers</span>
           <span class="stat-change up">&#8599; 45,000% growth since 2018</span>
@@ -66,7 +57,7 @@
           <div class="divider-vs">VS</div>
           <div class="divider-line"></div>
         </div>
-        <div class="stat-callout x-stat">
+        <div class="stat-callout x-stat" data-source-name="Brand Finance" data-source-url="https://www.brandfinance.com/press-releases/x-formerly-twitter-brand-value-falls-96-to-under-700-million/">
           <span class="stat-number">91<sup>%</sup></span>
           <span class="stat-label">Decline in X Brand Value</span>
           <span class="stat-change down">&#8601; $5.7B → $498M since 2022</span>
@@ -187,15 +178,15 @@
 
       <!-- Big quote callout -->
       <div class="big-stat-callout">
-        <div class="big-stat-item x-big-stat">
+        <div class="big-stat-item x-big-stat" data-source-name="Fortune / Reuters" data-source-url="https://fortune.com/2024/05/14/elon-musk-twitter-x-revenue-decline/">
           <span class="big-stat-num">-51%</span>
           <span class="big-stat-desc">X revenue since 2021 peak</span>
         </div>
-        <div class="big-stat-item substack-big-stat">
+        <div class="big-stat-item substack-big-stat" data-source-name="Sacra / TechCrunch" data-source-url="https://sacra.com/c/substack/">
           <span class="big-stat-num">+1,775%</span>
           <span class="big-stat-desc">Substack ARR growth since 2020</span>
         </div>
-        <div class="big-stat-item x-big-stat">
+        <div class="big-stat-item x-big-stat" data-source-name="Reuters Institute" data-source-url="https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2024">
           <span class="big-stat-num">4%</span>
           <span class="big-stat-desc">of marketers consider X ads "brand-safe"</span>
         </div>
@@ -209,49 +200,49 @@
       <p class="section-intro">Academic research and advertiser behavior tell a damning story: X has become a platform where hate speech is up, high-quality information is down, and the people tasked with policing both have been fired.</p>
 
       <div class="metrics-grid">
-        <div class="metric-card x-metric animate-in">
+        <div class="metric-card x-metric animate-in" data-source-name="UC Berkeley, PLOS ONE" data-source-url="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0293978">
           <div class="metric-icon">&#9650;</div>
           <div class="metric-value">+50%</div>
           <div class="metric-label">Increase in hate speech after acquisition</div>
           <div class="metric-source">UC Berkeley, PLOS ONE</div>
         </div>
-        <div class="metric-card x-metric animate-in">
+        <div class="metric-card x-metric animate-in" data-source-name="Harvard Misinformation Review" data-source-url="https://misinforeview.hks.harvard.edu/article/research-note-decline-in-credible-content-on-twitter-x/">
           <div class="metric-icon">&#9660;</div>
           <div class="metric-value">-27.84%</div>
           <div class="metric-label">Decline in sharing of high-credibility content</div>
           <div class="metric-source">Harvard Misinformation Review</div>
         </div>
-        <div class="metric-card x-metric animate-in">
+        <div class="metric-card x-metric animate-in" data-source-name="Reuters / Press Gazette" data-source-url="https://pressgazette.co.uk/platforms/elon-musk-twitter-x-changes/">
           <div class="metric-icon">&#9888;</div>
           <div class="metric-value">62,000+</div>
           <div class="metric-label">Previously banned accounts reinstated</div>
           <div class="metric-source">Reuters / Press Gazette</div>
         </div>
-        <div class="metric-card x-metric animate-in">
+        <div class="metric-card x-metric animate-in" data-source-name="Press Gazette / Reuters" data-source-url="https://pressgazette.co.uk/platforms/elon-musk-twitter-x-changes/">
           <div class="metric-icon">&#9997;</div>
           <div class="metric-value">-80%</div>
           <div class="metric-label">Safety engineers cut post-acquisition</div>
           <div class="metric-source">Press Gazette / Reuters</div>
         </div>
-        <div class="metric-card x-metric animate-in">
+        <div class="metric-card x-metric animate-in" data-source-name="Press Gazette" data-source-url="https://pressgazette.co.uk/platforms/elon-musk-twitter-x-changes/">
           <div class="metric-icon">&#9997;</div>
           <div class="metric-value">-52%</div>
           <div class="metric-label">Content moderators eliminated</div>
           <div class="metric-source">Press Gazette</div>
         </div>
-        <div class="metric-card x-metric animate-in">
+        <div class="metric-card x-metric animate-in" data-source-name="Reuters Institute" data-source-url="https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2024">
           <div class="metric-icon">&#128683;</div>
           <div class="metric-value">4%</div>
           <div class="metric-label">Marketers who consider X ads "brand-safe"</div>
           <div class="metric-source">Reuters Institute</div>
         </div>
-        <div class="metric-card substack-metric animate-in">
+        <div class="metric-card substack-metric animate-in" data-source-name="Substack" data-source-url="https://substack.com/going-paid">
           <div class="metric-icon">&#9733;</div>
           <div class="metric-value">87%</div>
           <div class="metric-label">Revenue share kept by Substack writers</div>
           <div class="metric-source">Substack</div>
         </div>
-        <div class="metric-card substack-metric animate-in">
+        <div class="metric-card substack-metric animate-in" data-source-name="Substack" data-source-url="https://on.substack.com/p/how-the-substack-recommendation-algorithm">
           <div class="metric-icon">&#128161;</div>
           <div class="metric-value">Subs</div>
           <div class="metric-label">Algorithm optimized for subscriptions, not engagement bait</div>
@@ -306,15 +297,15 @@
 
       <!-- Key Stats -->
       <div class="big-stat-callout">
-        <div class="big-stat-item x-big-stat">
+        <div class="big-stat-item x-big-stat" data-source-name="MediaRadar" data-source-url="https://www.mediaradar.com/blog/the-decline-of-ad-spend-on-x-a-closer-look-at-the-numbers">
           <span class="big-stat-num">86%</span>
           <span class="big-stat-desc">of top advertisers cut spending</span>
         </div>
-        <div class="big-stat-item x-big-stat">
+        <div class="big-stat-item x-big-stat" data-source-name="Sensor Tower" data-source-url="https://sensortower.com/blog/top-advertisers-flee-x-twitter-amidst-continued-controversy">
           <span class="big-stat-num">$5.9B</span>
           <span class="big-stat-desc">estimated lost ad revenue vs trajectory</span>
         </div>
-        <div class="big-stat-item x-big-stat">
+        <div class="big-stat-item x-big-stat" data-source-name="Kantar" data-source-url="https://www.kantar.com/press-center/more-marketers-to-pull-back-on-x-ad-spend-than-ever-before">
           <span class="big-stat-num">0.2%</span>
           <span class="big-stat-desc">X's share of global digital ad spend</span>
         </div>
@@ -325,49 +316,49 @@
         <h3 class="subsection-headline" style="margin-top: 40px; margin-bottom: 20px;">Major Brands That Pulled Spending</h3>
         <div class="brand-cards-grid">
 
-          <div class="person-card x-person animate-in">
+          <div class="person-card x-person animate-in" data-source-name="MediaRadar" data-source-url="https://www.mediaradar.com/blog/the-decline-of-ad-spend-on-x-a-closer-look-at-the-numbers">
             <div class="person-name">Apple</div>
             <div class="brand-spend-badge">$20.4M → $0.5M</div>
             <div class="person-detail">-98% spending reduction</div>
           </div>
-          <div class="person-card x-person animate-in">
+          <div class="person-card x-person animate-in" data-source-name="MediaRadar" data-source-url="https://www.mediaradar.com/blog/the-decline-of-ad-spend-on-x-a-closer-look-at-the-numbers">
             <div class="person-name">Disney</div>
             <div class="brand-spend-badge">$27.7M → $0.5M</div>
             <div class="person-detail">-98% spending reduction</div>
           </div>
-          <div class="person-card x-person animate-in">
+          <div class="person-card x-person animate-in" data-source-name="MediaRadar" data-source-url="https://www.mediaradar.com/blog/the-decline-of-ad-spend-on-x-a-closer-look-at-the-numbers">
             <div class="person-name">AT&amp;T</div>
             <div class="brand-spend-badge">$33.4M → $0.1M</div>
             <div class="person-detail">-99% spending reduction</div>
           </div>
 
-          <div class="person-card x-person animate-in">
+          <div class="person-card x-person animate-in" data-source-name="Sensor Tower" data-source-url="https://sensortower.com/blog/top-advertisers-flee-x-twitter-amidst-continued-controversy">
             <div class="person-name">IBM</div>
             <div class="brand-spend-badge">Was 5th-largest advertiser</div>
             <div class="person-detail">Pulled all ads over hate speech concerns</div>
           </div>
-          <div class="person-card x-person animate-in">
+          <div class="person-card x-person animate-in" data-source-name="MediaRadar" data-source-url="https://www.mediaradar.com/blog/the-decline-of-ad-spend-on-x-a-closer-look-at-the-numbers">
             <div class="person-name">Coca-Cola</div>
             <div class="brand-spend-badge">-96% spending</div>
             <div class="person-detail">Near-total withdrawal from platform</div>
           </div>
-          <div class="person-card x-person animate-in">
+          <div class="person-card x-person animate-in" data-source-name="Sensor Tower" data-source-url="https://sensortower.com/blog/top-advertisers-flee-x-twitter-amidst-continued-controversy">
             <div class="person-name">Nike</div>
             <div class="brand-spend-badge">-70%+ spending</div>
             <div class="person-detail">Significant pullback from X advertising</div>
           </div>
 
-          <div class="person-card x-person animate-in">
+          <div class="person-card x-person animate-in" data-source-name="MediaRadar" data-source-url="https://www.mediaradar.com/blog/the-decline-of-ad-spend-on-x-a-closer-look-at-the-numbers">
             <div class="person-name">Comcast</div>
             <div class="brand-spend-badge">$22.5M → $1.7M</div>
             <div class="person-detail">-92% spending reduction</div>
           </div>
-          <div class="person-card x-person animate-in">
+          <div class="person-card x-person animate-in" data-source-name="MediaRadar" data-source-url="https://www.mediaradar.com/blog/the-decline-of-ad-spend-on-x-a-closer-look-at-the-numbers">
             <div class="person-name">Microsoft</div>
             <div class="brand-spend-badge">$11M → $0.4M</div>
             <div class="person-detail">-96% spending reduction</div>
           </div>
-          <div class="person-card x-person animate-in">
+          <div class="person-card x-person animate-in" data-source-name="Kantar" data-source-url="https://www.kantar.com/press-center/more-marketers-to-pull-back-on-x-ad-spend-than-ever-before">
             <div class="person-name">Unilever</div>
             <div class="brand-spend-badge">Sued by X, settled</div>
             <div class="person-detail">Pulled ads; X filed suit, later settled</div>
@@ -403,25 +394,25 @@
       <!-- Substack App Metrics -->
       <h3 class="subsection-headline" style="margin-bottom: 16px;">Substack App: Engagement Flywheel</h3>
       <div class="metrics-grid traffic-metrics-grid" style="margin-bottom: 40px;">
-        <div class="metric-card substack-metric animate-in">
+        <div class="metric-card substack-metric animate-in" data-source-name="Substack" data-source-url="https://on.substack.com/p/the-substack-app-is-now-the-most-powerful">
           <div class="metric-icon">&#128172;</div>
           <div class="metric-value">15x</div>
           <div class="metric-label">More likely to comment (app vs non-app users)</div>
           <div class="metric-source">Substack</div>
         </div>
-        <div class="metric-card substack-metric animate-in">
+        <div class="metric-card substack-metric animate-in" data-source-name="Substack" data-source-url="https://on.substack.com/p/the-substack-app-is-now-the-most-powerful">
           <div class="metric-icon">&#128257;</div>
           <div class="metric-value">44x</div>
           <div class="metric-label">More likely to share posts</div>
           <div class="metric-source">Substack</div>
         </div>
-        <div class="metric-card substack-metric animate-in">
+        <div class="metric-card substack-metric animate-in" data-source-name="Substack" data-source-url="https://on.substack.com/p/the-substack-app-is-now-the-most-powerful">
           <div class="metric-icon">&#128176;</div>
           <div class="metric-value">3M</div>
           <div class="metric-label">Subscriptions driven by app per month</div>
           <div class="metric-source">Substack</div>
         </div>
-        <div class="metric-card substack-metric animate-in">
+        <div class="metric-card substack-metric animate-in" data-source-name="Substack" data-source-url="https://on.substack.com/p/the-substack-app-is-now-the-most-powerful">
           <div class="metric-icon">&#128200;</div>
           <div class="metric-value">139%</div>
           <div class="metric-label">YoY web traffic growth (2024)</div>
@@ -432,25 +423,25 @@
       <!-- X Traffic Decline Metrics -->
       <h3 class="subsection-headline" style="margin-bottom: 16px;">X: The Traffic Erosion</h3>
       <div class="metrics-grid traffic-metrics-grid" style="margin-bottom: 40px;">
-        <div class="metric-card x-metric animate-in">
+        <div class="metric-card x-metric animate-in" data-source-name="SimilarWeb via TechCrunch" data-source-url="https://techcrunch.com/2025/07/10/as-x-loses-its-ceo-daily-usage-is-down-and-competition-is-growing/">
           <div class="metric-icon">&#8595;</div>
           <div class="metric-value">-15.2%</div>
           <div class="metric-label">Mobile DAU year-over-year (June 2025)</div>
           <div class="metric-source">SimilarWeb via TechCrunch</div>
         </div>
-        <div class="metric-card x-metric animate-in">
+        <div class="metric-card x-metric animate-in" data-source-name="Pew Research" data-source-url="https://www.pewresearch.org/internet/2024/01/31/americans-use-of-twitter-x/">
           <div class="metric-icon">&#8595;</div>
           <div class="metric-value">-30%</div>
           <div class="metric-label">US population usage decline (27% → 19%)</div>
           <div class="metric-source">Pew Research</div>
         </div>
-        <div class="metric-card x-metric animate-in">
+        <div class="metric-card x-metric animate-in" data-source-name="TechCrunch" data-source-url="https://techcrunch.com/2025/07/10/as-x-loses-its-ceo-daily-usage-is-down-and-competition-is-growing/">
           <div class="metric-icon">&#128683;</div>
           <div class="metric-value">50%</div>
           <div class="metric-label">Less US daily active users vs one year ago</div>
           <div class="metric-source">TechCrunch</div>
         </div>
-        <div class="metric-card x-metric animate-in">
+        <div class="metric-card x-metric animate-in" data-source-name="TechCrunch" data-source-url="https://techcrunch.com/2026/01/18/threads-edges-out-x-in-daily-mobile-users-new-data-shows/">
           <div class="metric-icon">&#9201;</div>
           <div class="metric-value">8 min</div>
           <div class="metric-label">Average daily time on Threads vs 31 min on X</div>
@@ -460,15 +451,15 @@
 
       <!-- Key Stat Callout -->
       <div class="big-stat-callout">
-        <div class="big-stat-item threads-big-stat">
+        <div class="big-stat-item threads-big-stat" data-source-name="TechCrunch" data-source-url="https://techcrunch.com/2026/01/18/threads-edges-out-x-in-daily-mobile-users-new-data-shows/">
           <span class="big-stat-num">141.5M</span>
           <span class="big-stat-desc">Threads mobile DAU (Jan 2026)</span>
         </div>
-        <div class="big-stat-item x-big-stat">
+        <div class="big-stat-item x-big-stat" data-source-name="TechCrunch / SimilarWeb" data-source-url="https://techcrunch.com/2025/07/10/as-x-loses-its-ceo-daily-usage-is-down-and-competition-is-growing/">
           <span class="big-stat-num">125M</span>
           <span class="big-stat-desc">X mobile DAU (Jan 2026)</span>
         </div>
-        <div class="big-stat-item substack-big-stat">
+        <div class="big-stat-item substack-big-stat" data-source-name="TechCrunch" data-source-url="https://techcrunch.com/2025/01/30/threads-hits-320-million-monthly-active-users/">
           <span class="big-stat-num">400M</span>
           <span class="big-stat-desc">Threads monthly active users</span>
         </div>
@@ -490,7 +481,7 @@
         <div class="exodus-column">
           <h3 class="exodus-col-title"><span class="accent-x">Media Organizations</span><br>Leaving X</h3>
           <div class="exodus-timeline">
-            <div class="exodus-item animate-in">
+            <div class="exodus-item has-quote animate-in" data-quote-index="8">
               <div class="exodus-date">Apr 2023</div>
               <div class="exodus-entity">NPR</div>
               <div class="exodus-detail">Left after being labeled "state-affiliated media" by the platform</div>
@@ -500,15 +491,30 @@
               <div class="exodus-entity">PBS</div>
               <div class="exodus-detail">Suspended accounts in solidarity with NPR</div>
             </div>
-            <div class="exodus-item animate-in">
+            <div class="exodus-item has-quote animate-in" data-quote-index="0">
               <div class="exodus-date">Nov 2024</div>
               <div class="exodus-entity">The Guardian</div>
               <div class="exodus-detail">"Toxic media environment" cited by editor Katharine Viner</div>
             </div>
-            <div class="exodus-item animate-in">
+            <div class="exodus-item has-quote animate-in" data-quote-index="7">
               <div class="exodus-date">Jan 2025</div>
               <div class="exodus-entity">Le Monde</div>
               <div class="exodus-detail">French daily exits citing platform's editorial direction</div>
+            </div>
+            <div class="exodus-item animate-in">
+              <div class="exodus-date">Jan 2026</div>
+              <div class="exodus-entity">Media Matters</div>
+              <div class="exodus-detail">415K followers abandoned; cited terms-of-service weaponization</div>
+            </div>
+            <div class="exodus-item animate-in">
+              <div class="exodus-date">Nov 2024</div>
+              <div class="exodus-entity">Dagens Nyheter (Sweden)</div>
+              <div class="exodus-detail">Major Scandinavian paper; cited Musk-Trump political alignment</div>
+            </div>
+            <div class="exodus-item animate-in">
+              <div class="exodus-date">Dec 2024</div>
+              <div class="exodus-entity">European Federation of Journalists</div>
+              <div class="exodus-detail">Represents 300,000 journalists globally</div>
             </div>
           </div>
         </div>
@@ -546,6 +552,31 @@
               <div class="exodus-entity">Paul Krugman</div>
               <div class="exodus-detail">Nobel laureate economist launches Substack</div>
             </div>
+            <div class="exodus-item animate-in">
+              <div class="exodus-date">2019 (accelerated post-2022)</div>
+              <div class="exodus-entity">Heather Cox Richardson</div>
+              <div class="exodus-detail">Historian; 2.6M subscribers — largest Substack publication</div>
+            </div>
+            <div class="exodus-item animate-in">
+              <div class="exodus-date">2023</div>
+              <div class="exodus-entity">Robert Reich</div>
+              <div class="exodus-detail">Former Sec. of Labor; 1M+ subscribers</div>
+            </div>
+            <div class="exodus-item animate-in">
+              <div class="exodus-date">2024</div>
+              <div class="exodus-entity">Joyce Vance</div>
+              <div class="exodus-detail">Former US Attorney; 630K subscribers</div>
+            </div>
+            <div class="exodus-item animate-in">
+              <div class="exodus-date">2023</div>
+              <div class="exodus-entity">Dan Rather</div>
+              <div class="exodus-detail">Legendary CBS anchor; 530K subscribers</div>
+            </div>
+            <div class="exodus-item animate-in">
+              <div class="exodus-date">2025</div>
+              <div class="exodus-entity">Margaret Sullivan</div>
+              <div class="exodus-detail">Former WaPo media columnist; "American Crisis" newsletter</div>
+            </div>
           </div>
         </div>
 
@@ -563,6 +594,14 @@
             <div class="person-card animate-in substack-person">
               <div class="person-name">Jasmine Crockett</div>
               <div class="person-detail">Congressmember on Substack</div>
+            </div>
+            <div class="person-card animate-in substack-person">
+              <div class="person-name">Adam Kinzinger</div>
+              <div class="person-detail">Former GOP congressman, 389K subscribers</div>
+            </div>
+            <div class="person-card animate-in substack-person">
+              <div class="person-name">Rahm Emanuel</div>
+              <div class="person-detail">Former Chicago Mayor / Ambassador</div>
             </div>
           </div>
           <div class="exodus-divider">Celebrities leaving X</div>
@@ -586,6 +625,33 @@
             <div class="person-card animate-in x-person">
               <div class="person-name">Elton John</div>
               <div class="person-detail">Musician left citing hate speech increase</div>
+            </div>
+            <div class="person-card animate-in x-person">
+              <div class="person-name">Bette Midler</div>
+              <div class="person-detail">Actor/comedian, deactivated post-election</div>
+            </div>
+            <div class="person-card animate-in x-person">
+              <div class="person-name">Shonda Rhimes</div>
+              <div class="person-detail">TV producer, left after Musk acquisition</div>
+            </div>
+            <div class="person-card animate-in x-person">
+              <div class="person-name">Michael Moore</div>
+              <div class="person-detail">Filmmaker, moved to Substack (835K subscribers)</div>
+            </div>
+          </div>
+          <div class="exodus-divider">Musicians on Substack</div>
+          <div class="exodus-cards-small">
+            <div class="person-card animate-in substack-person">
+              <div class="person-name">Patti Smith</div>
+              <div class="person-detail">Iconic musician, active Substacker</div>
+            </div>
+            <div class="person-card animate-in substack-person">
+              <div class="person-name">Charli XCX</div>
+              <div class="person-detail">Pop star, launched Substack Nov 2025</div>
+            </div>
+            <div class="person-card animate-in substack-person">
+              <div class="person-name">Dolly Parton</div>
+              <div class="person-detail">Country legend, direct fan connection</div>
             </div>
           </div>
         </div>
@@ -640,6 +706,54 @@
             <div class="quote-title">Crooked Media co-founder, former Obama aide</div>
           </div>
         </div>
+        <div class="quote-card" data-index="5">
+          <div class="quote-mark">&ldquo;</div>
+          <blockquote class="quote-text">Under Elon Musk&rsquo;s leadership, X has increasingly shifted toward serving his political agenda. The tipping point for me was the deliberate manipulation of algorithms to boost his own posts after he endorsed Donald Trump.</blockquote>
+          <div class="quote-attribution">
+            <div class="quote-name">Peter Singer</div>
+            <div class="quote-title">Professor of Bioethics, Princeton University</div>
+          </div>
+        </div>
+        <div class="quote-card" data-index="6">
+          <div class="quote-mark">&ldquo;</div>
+          <blockquote class="quote-text">Starting Monday I won&rsquo;t be continuing at this site. For a while Twitter was a way to do journalism education in public, for a public &mdash; and for free. I think I was effective at times in that role. I no longer know how that&rsquo;s done.</blockquote>
+          <div class="quote-attribution">
+            <div class="quote-name">Jay Rosen</div>
+            <div class="quote-title">Professor of Journalism, NYU (300K+ followers)</div>
+          </div>
+        </div>
+        <div class="quote-card" data-index="7">
+          <div class="quote-mark">&ldquo;</div>
+          <blockquote class="quote-text">The intensification of Musk&rsquo;s activism, the formalization of his position within the Trump power apparatus and the increasing toxicity of the exchanges led us to come to the conclusion that the usefulness of our presence weighs less than the many suffered side-effects.</blockquote>
+          <div class="quote-attribution">
+            <div class="quote-name">J&eacute;r&ocirc;me Fenoglio</div>
+            <div class="quote-title">Editorial Director, Le Monde</div>
+          </div>
+        </div>
+        <div class="quote-card" data-index="8">
+          <div class="quote-mark">&ldquo;</div>
+          <blockquote class="quote-text">It would be a disservice to the serious work you all do here to continue to share it on a platform that is associating the federal charter for public media with an abandoning of editorial independence or standards.</blockquote>
+          <div class="quote-attribution">
+            <div class="quote-name">John Lansing</div>
+            <div class="quote-title">CEO, NPR</div>
+          </div>
+        </div>
+        <div class="quote-card" data-index="9">
+          <div class="quote-mark">&ldquo;</div>
+          <blockquote class="quote-text">Since Elon Musk took over, the platform has increasingly merged with his and Donald Trump&rsquo;s political ambitions.</blockquote>
+          <div class="quote-attribution">
+            <div class="quote-name">Peter Wolodarski</div>
+            <div class="quote-title">Editor-in-chief, Dagens Nyheter (Sweden)</div>
+          </div>
+        </div>
+        <div class="quote-card" data-index="10">
+          <div class="quote-mark">&ldquo;</div>
+          <blockquote class="quote-text">I feel like Twitter back in the day was kind of everything for journalists and writers &mdash; it was like a job board; place of idea generation; a little diary.</blockquote>
+          <div class="quote-attribution">
+            <div class="quote-name">P.E. Moskowitz</div>
+            <div class="quote-title">Journalist, &ldquo;Mental Hellth&rdquo; newsletter</div>
+          </div>
+        </div>
       </div>
 
       <div class="quote-nav">
@@ -650,6 +764,12 @@
           <button class="quote-dot" data-index="2" aria-label="Quote 3"></button>
           <button class="quote-dot" data-index="3" aria-label="Quote 4"></button>
           <button class="quote-dot" data-index="4" aria-label="Quote 5"></button>
+          <button class="quote-dot" data-index="5" aria-label="Quote 6"></button>
+          <button class="quote-dot" data-index="6" aria-label="Quote 7"></button>
+          <button class="quote-dot" data-index="7" aria-label="Quote 8"></button>
+          <button class="quote-dot" data-index="8" aria-label="Quote 9"></button>
+          <button class="quote-dot" data-index="9" aria-label="Quote 10"></button>
+          <button class="quote-dot" data-index="10" aria-label="Quote 11"></button>
         </div>
         <button class="quote-nav-btn" id="quoteNext" aria-label="Next quote">&#8594;</button>
       </div>
@@ -727,13 +847,13 @@
             </tr>
             <tr class="table-row">
               <td class="metric-name">Notable Recent Additions</td>
-              <td class="substack-cell"><span class="cell-positive">Buttigieg, Acosta, Krugman, Hasan</span></td>
+              <td class="substack-cell"><span class="cell-positive">Buttigieg, Acosta, Krugman, Hasan, Reich, Vance</span></td>
               <td class="x-cell"><span class="cell-neutral">—</span></td>
             </tr>
             <tr class="table-row">
               <td class="metric-name">Notable Recent Departures</td>
               <td class="substack-cell"><span class="cell-neutral">—</span></td>
-              <td class="x-cell"><span class="cell-negative">Guardian, NPR, Stephen King, Elton John</span></td>
+              <td class="x-cell"><span class="cell-negative">Guardian, NPR, Le Monde, Media Matters, Stephen King</span></td>
             </tr>
           </tbody>
         </table>
